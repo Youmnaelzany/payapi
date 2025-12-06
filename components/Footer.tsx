@@ -1,38 +1,17 @@
 import Image from "next/image";
-import Wrapper from "./Wrapper";
 import Link from "next/link";
 import { FaFacebookSquare } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaLinkedin, FaXTwitter } from "react-icons/fa6";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { NAVIGATION } from "@/lib/Concents";
+import Wrapper from "./Wrapper";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-export const NAVIGATION = [
-  {
-    id: 1,
-    href: "/pricing",
-    label: "Pricing",
-  },
-  {
-    id: 2,
-    href: "/about",
-    label: "About",
-  },
-  {
-    id: 3,
-    href: "/contact",
-    label: "Contact",
-  },
-];
 const Footer = () => {
   return (
     <Wrapper
       as="footer"
       aria-label="Footer"
-      className="bg-[#1B262F] flex flex-col items-center gap-10 py-12 md:py-6 justify-center md:flex-row md:justify-between"
+      className="flex flex-col items-center justify-center gap-10 bg-[#1B262F] py-12 md:flex-row md:justify-between md:py-6"
     >
       <div className="flex flex-col items-center justify-center gap-10 md:flex-row md:justify-between md:gap-16">
         {/* Logo */}
@@ -51,7 +30,7 @@ const Footer = () => {
               <li key={nav.id}>
                 <Link
                   href={nav.href}
-                  className="text-white opacity-70 font-bold font-public-sans tracking-normal leading-[auto] text-[0.9375rem] hover:opacity-100 ease-in-out duration-500 transition-all"
+                  className="font-public-sans text-[0.9375rem] leading-[auto] font-bold tracking-normal text-white opacity-70 transition-all duration-500 ease-in-out hover:opacity-100"
                 >
                   {nav.label}
                 </Link>
@@ -66,7 +45,7 @@ const Footer = () => {
           <Tooltip>
             <TooltipTrigger>
               <Link href={"#"}>
-                <FaFacebookSquare className="text-white size-6 hover:text-[#DA6D97] ease-in-out duration-500 transition-all" />
+                <FaFacebookSquare className="size-6 text-white transition-all duration-500 ease-in-out hover:text-[#DA6D97]" />
               </Link>
             </TooltipTrigger>
             <TooltipContent>
@@ -78,7 +57,7 @@ const Footer = () => {
           <Tooltip>
             <TooltipTrigger>
               <Link href={"#"}>
-                <FaXTwitter className="text-white size-6 hover:text-[#DA6D97] ease-in-out duration-500 transition-all" />
+                <FaXTwitter className="size-6 text-white transition-all duration-500 ease-in-out hover:text-[#DA6D97]" />
               </Link>
             </TooltipTrigger>
             <TooltipContent>
@@ -90,7 +69,7 @@ const Footer = () => {
           <Tooltip>
             <TooltipTrigger>
               <Link href={"#"}>
-                <FaLinkedin className="text-white size-6 hover:text-[#DA6D97] ease-in-out duration-500 transition-all" />
+                <FaLinkedin className="size-6 text-white transition-all duration-500 ease-in-out hover:text-[#DA6D97]" />
               </Link>
             </TooltipTrigger>
             <TooltipContent>

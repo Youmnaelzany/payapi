@@ -3,6 +3,7 @@ import { DM_Serif_Display, Public_Sans } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ReadyToStart from "@/components/ReadyToStart";
 
 const dmSerifDisplay = DM_Serif_Display({
   variable: "--font-dm-serif-display",
@@ -18,8 +19,7 @@ const publicSans = Public_Sans({
 
 export const metadata: Metadata = {
   title: "PayAPI",
-  description:
-    "PayAPI is a payment processing platform that allows you to accept payments online.",
+  description: "PayAPI is a payment processing platform that allows you to accept payments online.",
 };
 
 export default function RootLayout({
@@ -31,10 +31,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         suppressHydrationWarning
-        className={`${dmSerifDisplay.variable} max-w-360 mx-auto bg-[#EDF3F8] ${publicSans.variable} antialiased`}
+        className={`${dmSerifDisplay.variable} mx-auto min-h-screen max-w-360 bg-[#EDF3F8] ${publicSans.variable} antialiased`}
       >
         <Header />
-        <main className="mt-24 min-h-screen">{children}</main>
+        <main className="mt-24">{children}</main>
+        <ReadyToStart />
         <Footer />
       </body>
     </html>

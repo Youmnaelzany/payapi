@@ -1,3 +1,5 @@
+import Image from "next/image";
+import Link from "next/link";
 import { Menu } from "lucide-react";
 import {
   Sheet,
@@ -7,33 +9,32 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import { Separator } from "./ui/separator";
-import { NAVIGATION } from "./Footer";
-import Link from "next/link";
+import { NAVIGATION } from "@/lib/Concents";
 import { Button } from "./ui/button";
-import Image from "next/image";
+import { Separator } from "./ui/separator";
+
 const Mobile = () => {
   return (
-    <div className="md:hidden flex items-center">
+    <div className="flex items-center md:hidden">
       <Sheet>
         <SheetTrigger asChild>
-          <button className="p-2 -mr-2">
+          <button className="-mr-2 p-2">
             <Menu className="size-7 text-[#36536B]" />
           </button>
         </SheetTrigger>
-        <SheetContent className="bg-[#1B262F] py-16 overflow-hidden">
+        <SheetContent className="overflow-hidden bg-[#1B262F] py-16">
           <SheetHeader>
             <SheetTitle>
               <Separator className="text-[#FBFCFE] opacity-20" />
             </SheetTitle>
-            <SheetDescription className="py-12 relative">
+            <SheetDescription className="relative py-12">
               <nav className="flex flex-col items-center justify-between gap-8">
                 <ul className="flex flex-col items-center justify-between gap-8">
                   {NAVIGATION.map((nav) => (
                     <li key={nav.id}>
                       <Link
                         href={nav.href}
-                        className="text-white opacity-70 font-bold font-public-sans tracking-normal leading-[auto] text-[1.25rem] hover:opacity-100 ease-in-out duration-500 transition-all"
+                        className="font-public-sans text-[1.25rem] leading-[auto] font-bold tracking-normal text-white opacity-70 transition-all duration-500 ease-in-out hover:opacity-100"
                       >
                         {nav.label}
                       </Link>
@@ -48,13 +49,13 @@ const Mobile = () => {
                 >
                   Schedule a Demo
                 </Button>
-                <div className="absolute -top-[80%] -left-1/4 w-[150%] overflow-hidden pointer-events-none -z-10">
+                <div className="pointer-events-none absolute -top-[80%] -left-1/4 -z-10 w-[150%] overflow-hidden">
                   <Image
                     src="/shared/desktop/bg-pattern-circle.svg"
                     alt=""
                     width={900}
                     height={900}
-                    className="w-full h-auto"
+                    className="h-auto w-full"
                     aria-hidden="true"
                     priority
                   />
