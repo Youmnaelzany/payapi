@@ -4,7 +4,7 @@ import Wrapper from "./Wrapper";
 
 const AppBenefits = () => {
   return (
-    <Wrapper className="flex flex-col items-center justify-center gap-12 pt-20 md:flex-row md:items-baseline md:justify-between md:gap-2.5 md:pt-25 lg:gap-7.5">
+    <Wrapper className="flex flex-col items-center justify-center gap-12 md:flex-row md:items-baseline md:justify-between md:gap-2.5 lg:gap-7.5">
       {APP_BENEFITS.map((benefit) => (
         <div
           className="flex flex-col items-center justify-center gap-8"
