@@ -6,7 +6,7 @@ const SimpleUi = () => {
     <Wrapper
       as="section"
       aria-label="Simple UI & UX"
-      className="flex flex-col items-center justify-center py-20 md:py-25 lg:flex-row-reverse lg:justify-between lg:py-38"
+      className="flex flex-col items-center justify-center py-20 md:py-25 lg:flex-row-reverse lg:justify-between"
     >
       <Image
         src="/home/desktop/illustration-simple-ui.svg"
